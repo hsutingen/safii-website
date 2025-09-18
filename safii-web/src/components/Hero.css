@@ -1,0 +1,381 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-gradient);
+  opacity: 0.1;
+  z-index: -2;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(255, 124, 163, 0.3) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-text {
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-dark);
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-xl);
+  max-width: 90%;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.btn-large {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hero-stats {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-family: var(--font-english);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-pink-start);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* 手機模型 */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.phone-mockup {
+  width: 280px;
+  height: 560px;
+  background: linear-gradient(135deg, #333, #111);
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-interface {
+  padding: 20px 16px;
+  height: 100%;
+  background: linear-gradient(180deg, #F8F9FF 0%, #FFFFFF 100%);
+}
+
+.status-bar {
+  height: 20px;
+  background: linear-gradient(90deg, #333 80%, #666 80%, #666 85%, #999 85%);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.app-header {
+  margin-bottom: 32px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting span:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.status.safe {
+  font-size: 0.8rem;
+  color: #22C55E;
+  font-weight: 500;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.emergency .btn-icon {
+  background: linear-gradient(135deg, #FF6B6B, #FF5722);
+}
+
+.fake-call .btn-icon {
+  background: linear-gradient(135deg, #4ECDC4, #26A69A);
+}
+
+.route .btn-icon {
+  background: linear-gradient(135deg, #45B7D1, #1976D2);
+}
+
+.action-btn span {
+  font-size: 0.7rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.map-preview {
+  height: 200px;
+  background: linear-gradient(135deg, #E8F5E8, #F0F8F0);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--primary-pink-start);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(255, 124, 163, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.safe-zone {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  right: 30%;
+  bottom: 30%;
+  border: 2px dashed #22C55E;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* 浮動卡片 */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--white);
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.floating-card .icon {
+  font-size: 1.2rem;
+}
+
+.card-1 {
+  top: 15%;
+  left: -20%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.card-2 {
+  top: 60%;
+  right: -25%;
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.card-3 {
+  bottom: 20%;
+  left: -15%;
+  animation: float 6s ease-in-out infinite 4s;
+}
+
+/* 動畫 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 8px rgba(255, 124, 163, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(255, 124, 163, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(255, 124, 163, 0.3);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: var(--spacing-xl);
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .phone-mockup {
+    width: 240px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    max-width: 100%;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-large {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 1rem;
+  }
+  
+  .hero-visual {
+    height: 400px;
+  }
+  
+  .phone-mockup {
+    width: 200px;
+    height: 400px;
+  }
+  
+  .floating-card {
+    display: none;
+  }
+}
