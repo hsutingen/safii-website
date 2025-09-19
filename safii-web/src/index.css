@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* SAFII 粉色系品牌色彩 - 更溫暖美觀的設計 */
-  --safii-pink-primary: #E91E63;
-  --safii-pink-light: #F8BBD9;
-  --safii-pink-soft: #FCE4EC;
-  --safii-pink-dark: #AD1457;
-  --safii-accent: #FF6B9D;
+  /* SAFII 品牌色彩 - 以 #f3c5bd 為主色調 */
+  --safii-primary: #f3c5bd;
+  --safii-primary-light: #f8d5cd;
+  --safii-primary-lighter: #fde9e4;
+  --safii-primary-dark: #e8a693;
+  --safii-accent: #ff9b85;
   
   /* 主要色彩 */
-  --primary-pink-start: #E91E63;
-  --primary-pink-end: #FF6B9D;
-  --primary-gradient: linear-gradient(135deg, #E91E63, #FF6B9D);
-  --secondary-gradient: linear-gradient(135deg, #F8BBD9, #FCE4EC);
+  --primary-pink-start: #f3c5bd;
+  --primary-pink-end: #ff9b85;
+  --primary-gradient: linear-gradient(135deg, #f3c5bd, #ff9b85);
+  --secondary-gradient: linear-gradient(135deg, #f8d5cd, #fde9e4);
   
   /* 輔助色彩 */
-  --accent-pink: #FF6B9D;
-  --soft-pink: #F8BBD9;
-  --background-pink: #FCE4EC;
-  --deep-pink: #AD1457;
+  --accent-pink: #ff9b85;
+  --soft-pink: #f8d5cd;
+  --background-pink: #fde9e4;
+  --deep-pink: #e8a693;
   
   /* 文字色彩 */
   --text-dark: #2D3748;
@@ -44,7 +44,7 @@
   
   /* 舊變數保持相容性 */
   --dark-gray-blue: #2D3748;
-  --safii-pink: var(--soft-pink);
+  --safii-pink: var(--safii-primary);
   --safii-orange: var(--accent-pink);
   --safii-yellow: #FED7D7;
   --safii-blue: var(--card-background);
@@ -90,35 +90,45 @@ html {
 
 body {
   font-family: var(--font-chinese);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-dark);
   background-color: var(--white);
   font-size: 16px;
+  letter-spacing: 0.02em;
 }
 
-/* 標題樣式 */
+/* 標題樣式 - 更自然的分布 */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.01em;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-lg);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-md);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
 }
 
-/* 段落 */
+/* 段落 - 改善閱讀體驗 */
 p {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
   color: var(--text-light);
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
 /* 連結 */

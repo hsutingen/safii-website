@@ -78,8 +78,14 @@ function Contact() {
               <h2>與我們聯繫</h2>
               <p>
                 SAFII 目前正在開發中，我們很樂意聽到您的想法和建議。
-                填寫下方表單或直接寄信到 safiihsu@gmail.com 與我們聯繫。
               </p>
+              <div className="contact-notice">
+                <div className="notice-icon">📧</div>
+                <div className="notice-content">
+                  <strong>如何與我們聯繫：</strong>
+                  <p>點擊「發送訊息」按鈕會開啟您的郵件軟體，並自動填入內容模板。您也可以直接寄信到 <a href="mailto:safiihsu@gmail.com">safiihsu@gmail.com</a></p>
+                </div>
+              </div>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>

@@ -98,6 +98,66 @@
   background: var(--white);
 }
 
+.form-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.form-intro > p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  background: var(--background-pink);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--safii-primary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.notice-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-content strong {
+  display: block;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.05rem;
+}
+
+.notice-content p {
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.notice-content a {
+  color: var(--safii-primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.notice-content a:hover {
+  text-decoration: underline;
+}
+
 .form-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
