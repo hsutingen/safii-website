@@ -10,9 +10,9 @@ function Footer() {
             <Link to="/" className="footer-logo">
               <h3>SAFII</h3>
             </Link>
-            <p className="footer-slogan">Safe for Every 'I' Individually</p>
+            <p className="footer-slogan">Safe for Every 'I' — Individually, Intuitively, Invisibly</p>
             <p className="footer-description">
-              守護每一個獨立的妳，透過科技與社群的力量，創造更安全的環境。
+              為女性量身設計的隱私友善型安全守護系統，兼具科技的理性與情感的溫度。
             </p>
           </div>
 
@@ -21,8 +21,8 @@ function Footer() {
             <ul className="footer-links">
               <li><Link to="/features">功能介紹</Link></li>
               <li><Link to="/download">立即下載</Link></li>
-              <li><a href="#privacy">隱私政策</a></li>
-              <li><a href="#terms">服務條款</a></li>
+              <li><Link to="/privacy">隱私安全</Link></li>
+              <li><Link to="/faq">常見問答</Link></li>
             </ul>
           </div>
 

@@ -48,6 +48,26 @@
   color: var(--text-dark);
 }
 
+.english-tagline {
+  font-family: var(--font-english);
+  font-size: 3.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.subtitle-text {
+  font-family: var(--font-english);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-light);
+  font-style: italic;
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
 .gradient-text {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
@@ -56,8 +76,17 @@
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+  max-width: 95%;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--text-light);
   margin-bottom: var(--spacing-xl);
   max-width: 90%;

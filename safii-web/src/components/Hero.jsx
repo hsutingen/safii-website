@@ -9,12 +9,14 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              守護每一個<br />
-              <span className="gradient-text">獨立的妳</span>
+              <span className="english-tagline">Safe for Every 'I'</span><br />
+              <span className="subtitle-text">Individually, Intuitively, Invisibly</span>
             </h1>
             <p className="hero-subtitle">
-              SAFII 透過智慧科技與女性互助網絡，為妳提供全方位的安全守護。
-              無論何時何地，讓妳都能自信前行。
+              在最日常的時刻，也有人即時看見你。一鍵視訊互助、適度追蹤、安全路徑、AI 假電話與一鍵通報，把安心做成日常。
+            </p>
+            <p className="hero-description">
+              為女性量身設計的隱私友善型安全守護系統，兼具科技的理性與情感的溫度。
             </p>
             <div className="hero-actions">
               <Link to="/download" className="btn btn-primary btn-large">
@@ -26,16 +28,16 @@ function Hero() {
             </div>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-number">50K+</span>
-                <span className="stat-label">活躍用戶</span>
+                <span className="stat-number">適度</span>
+                <span className="stat-label">追蹤守護</span>
               </div>
               <div className="stat">
-                <span className="stat-number">1000+</span>
-                <span className="stat-label">安全事件處理</span>
+                <span className="stat-number">隱私</span>
+                <span className="stat-label">優先保護</span>
               </div>
               <div className="stat">
-                <span className="stat-number">24/7</span>
-                <span className="stat-label">全天候守護</span>
+                <span className="stat-number">即時</span>
+                <span className="stat-label">互助支援</span>
               </div>
             </div>
           </div>

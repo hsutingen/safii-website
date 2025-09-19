@@ -6,6 +6,8 @@ import Features from './pages/Features';
 import About from './pages/About';
 import Download from './pages/Download';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
+import Privacy from './pages/Privacy';
 import './App.css';
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/download" element={<Download />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer />

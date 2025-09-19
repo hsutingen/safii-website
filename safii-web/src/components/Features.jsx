@@ -4,48 +4,79 @@ function Features() {
   const features = [
     {
       id: 1,
-      icon: '🚨',
-      title: '即時守護',
-      subtitle: '緊急警報 · 假電話 · 強噪音',
-      description: '一鍵觸發多重防護機制，緊急時刻自動發送位置給信任聯絡人，假電話與強噪音功能有效嚇阻潛在危險。',
+      icon: '⏱️',
+      title: '適度追蹤',
+      subtitle: 'Moderate Tracking — 本系統核心',
+      description: '事先設定追蹤時長，按時回覆等於安全，未回覆則自動通報位置。只在需要時分享，不把安心建在長期曝露上。',
       features: [
-        '一鍵緊急求助',
-        '自動位置傳送',
-        '假電話偽裝',
-        '高分貝警報音'
+        '自控時長與頻率',
+        '到點自動關閉',
+        '未回報即求援',
+        '隱私優先設計'
       ],
-      bgColor: 'linear-gradient(135deg, #FFE5EC, #FFF0F3)',
-      iconBg: 'linear-gradient(135deg, #FF6B6B, #FF5722)'
+      bgColor: 'var(--safii-pink)',
+      iconBg: 'linear-gradient(135deg, #f3c5bd, #ffc097)',
+      isPrimary: true
     },
     {
       id: 2,
       icon: '🗺️',
-      title: '智慧路線規劃',
-      subtitle: '安全路線 · 危險區域警示',
-      description: '基於大數據分析提供最安全的路線建議，實時標注便利商店、警察局等安全地點，主動避開高風險區域。',
+      title: '安全路徑',
+      subtitle: 'Safe Route',
+      description: '參考監視器分佈與明暗度，標紅提醒風險路段，標示便利商店、警局等據點，偏離路線即時提醒。',
       features: [
-        '最安全路線推薦',
-        '即時危險區域警示',
-        '安全地點標記',
-        '夜間專屬路線'
+        '監視器分佈分析',
+        '風險路段標紅',
+        '安全據點標示',
+        '偏離路線提醒'
       ],
-      bgColor: 'linear-gradient(135deg, #E3F2FD, #F3F8FF)',
-      iconBg: 'linear-gradient(135deg, #45B7D1, #1976D2)'
+      bgColor: 'var(--safii-blue)',
+      iconBg: 'linear-gradient(135deg, #d2dfe8, #a8d0e6)'
     },
     {
       id: 3,
-      icon: '👥',
-      title: '女性互助網絡',
-      subtitle: '附近女性協助 · 社群守護',
-      description: '建立在地女性互助社群，就近提供協助與陪伴。透過匿名系統保護隱私，同時建立強大的安全守護網。',
+      icon: '📞',
+      title: 'AI 假電話',
+      subtitle: 'Fake Call with AI',
+      description: 'AI 生成自然對話，讓你流暢假裝通話形成嚇阻。內建多種情境身份，可延遲來電，害怕時提供文字語音安撫。',
       features: [
-        '附近女性即時協助',
-        '匿名安全互助',
-        '社群守護圈',
-        '24小時陪伴服務'
+        'AI 自然對話生成',
+        '多種情境身份',
+        '延遲來電設定',
+        '情緒安撫功能'
       ],
-      bgColor: 'linear-gradient(135deg, #F3E5F5, #FAF0FB)',
-      iconBg: 'linear-gradient(135deg, #AB47BC, #8E24AA)'
+      bgColor: 'var(--safii-yellow)',
+      iconBg: 'linear-gradient(135deg, #fcdc8e, #f4d67f)'
+    },
+    {
+      id: 4,
+      icon: '🚨',
+      title: '一鍵通報',
+      subtitle: 'Emergency Alert',
+      description: '長按啟動防誤觸，即時定位加情境文字一鍵送出。不需講電話、不需敘述地址，爭取反應時間。',
+      features: [
+        '長按防誤觸',
+        '即時定位發送',
+        '情境文字描述',
+        '快速通報群組'
+      ],
+      bgColor: 'var(--safii-green)',
+      iconBg: 'linear-gradient(135deg, #dae0dc, #c8d6d3)'
+    },
+    {
+      id: 5,
+      icon: '👥',
+      title: '女性互助',
+      subtitle: '視訊陪走｜降低求助門檻',
+      description: '一鍵建立視訊房，可匿名、可先語音。優先媒合距離近的守護者，在不安但尚未事故的黃金時間陪你走。',
+      features: [
+        '一鍵視訊陪走',
+        '匿名保護隱私',
+        '距離優先媒合',
+        '黃金時間支援'
+      ],
+      bgColor: 'var(--safii-orange)',
+      iconBg: 'linear-gradient(135deg, #ffc097, #ffb088)'
     }
   ];
 
@@ -53,9 +84,12 @@ function Features() {
     <section className="features">
       <div className="container">
         <div className="features-header">
-          <h2 className="section-title">三大核心功能</h2>
+          <h2 className="section-title">五大核心功能</h2>
           <p className="section-subtitle">
-            透過科技與社群的力量，為每一位女性提供全方位的安全守護
+            以「適度追蹤」為核心，建立隱私友善的完整安全生態系統
+          </p>
+          <p className="section-description">
+            低門檻求助、隱私優先、情境貼合——安全不該靠運氣
           </p>
         </div>
 
@@ -63,7 +97,7 @@ function Features() {
           {features.map((feature) => (
             <div 
               key={feature.id} 
-              className="feature-card"
+              className={`feature-card ${feature.isPrimary ? 'primary-feature' : ''}`}
               style={{ background: feature.bgColor }}
             >
               <div className="feature-header">

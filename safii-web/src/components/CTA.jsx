@@ -8,14 +8,14 @@ function CTA() {
       <div className="container">
         <div className="cta-content">
           <h2 className="cta-title">
-            立即下載 SAFII
+            把安心做成日常
             <br />
-            <span className="gradient-text">守護你的安全</span>
+            <span className="gradient-text">Safe for Every 'I'</span>
           </h2>
           <p className="cta-subtitle">
-            加入 50,000+ 位女性用戶，體驗全方位的智慧安全守護。
+            在最日常的時刻，也有人即時看見你。
             <br />
-            免費下載，讓科技成為你最可靠的安全夥伴。
+            隱私友善的適度追蹤，讓安全不再靠運氣。
           </p>
           
           <div className="cta-actions">

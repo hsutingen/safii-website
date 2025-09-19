@@ -3,28 +3,28 @@ import './About.css';
 function About() {
   const teamMembers = [
     {
-      name: '許庭恩',
-      role: '創辦人 & CEO',
-      description: '前科技業產品經理，致力於用科技解決女性安全問題',
+      name: '許庭恩 Renee',
+      role: '發起人／產品策略與體驗',
+      description: 'NTU 財金背景；使用者研究、產品定位、合作拓展',
       avatar: '👩‍💼'
     },
     {
-      name: '陳志明',
-      role: 'CTO',
-      description: '資深軟體工程師，專精於移動應用開發與AI技術',
+      name: '楊景丞 Jensen',
+      role: '產品／技術協作',
+      description: 'NTU 資訊背景；前後端開發、系統架構、UIUX、AI 應用探索',
       avatar: '👨‍💻'
     },
     {
-      name: '王美華',
-      role: '產品總監',
-      description: 'UX設計專家，專注於創造直觀易用的安全產品體驗',
-      avatar: '👩‍🎨'
+      name: '高翊茗 Iming',
+      role: '產品／技術協作',
+      description: 'NTU 資訊背景；前後端開發、系統架構、UIUX、AI 應用探索',
+      avatar: '👨‍💻'
     },
     {
-      name: '張大衛',
-      role: '安全專家',
-      description: '前警界資深人士，提供專業的安全策略建議',
-      avatar: '👨‍🔒'
+      name: '許悅恩 Reese',
+      role: '財務會計／法遵',
+      description: '記帳士；成本控管、金流稽核、合約與隱私合規支援',
+      avatar: '👩‍💼'
     }
   ];
 
@@ -57,7 +57,10 @@ function About() {
         <div className="container">
           <h1 className="page-title">關於我們</h1>
           <p className="page-subtitle">
-            用科技守護每一個獨立的妳
+            Safe for Every 'I' — Individually, Intuitively, Invisibly
+          </p>
+          <p className="page-description">
+            為女性量身設計的隱私友善型安全守護系統
           </p>
         </div>
       </div>
@@ -66,18 +69,19 @@ function About() {
         <div className="container">
           <div className="mission-content">
             <div className="mission-text">
-              <h2>我們的使命</h2>
+              <h2>我們在解決什麼</h2>
               <div className="brand-concept">
-                <h3>Safe for Every 'I' Individually</h3>
+                <h3>核心信念：安全不該靠運氣</h3>
                 <p className="concept-explanation">
-                  SAFII 不僅是「Safe」與「AI」的結合，更代表著為每一個獨立個體（'I'）提供安全守護的理念。
-                  我們相信每一位女性都有權在任何時候、任何地方感到安全與自由。
+                  <strong>臨場失能：</strong>真正遇到危險時，人可能無法主動求救（恐懼、受限、手機不在手）。<br/>
+                  <strong>隱私矛盾：</strong>希望出事有人知道，但不想每分每秒暴露行蹤。<br/>
+                  <strong>城市日常風險：</strong>夜歸、通勤、短距離外出、獨居人口攀升——高頻且被忽略。<br/>
+                  <strong>求助門檻高：</strong>不想麻煩親友、也不願交換私訊；需要直覺、低負擔的即時支援。
                 </p>
               </div>
               <p className="mission-description">
-                SAFII 致力於透過創新科技與社群力量，為女性創造更安全的生活環境。
-                我們不只是提供一個應用程式，而是建立一個完整的安全生態系統，
-                讓科技成為每位女性最可靠的安全夥伴。
+                設計要讓「預防 → 風險降低 → 求援」自動而可控，並尊重隱私。
+                兼具科技的理性與情感的溫度，把安心做成日常。
               </p>
             </div>
             <div className="mission-visual">
@@ -92,27 +96,27 @@ function About() {
 
       <section className="values-section">
         <div className="container">
-          <h2 className="section-title">核心價值</h2>
+          <h2 className="section-title">為什麼是 SAFII</h2>
           <div className="values-grid">
             <div className="value-card">
+              <div className="value-icon">⏱️</div>
+              <h3>低門檻求助</h3>
+              <p>一鍵視訊互助（可匿名／可先語音）＋一鍵通報，搶時間、降阻力。</p>
+            </div>
+            <div className="value-card">
               <div className="value-icon">🔒</div>
-              <h3>隱私至上</h3>
-              <p>保護用戶隱私是我們的首要原則，所有數據都採用最高等級的加密保護。</p>
+              <h3>隱私優先</h3>
+              <p>適度追蹤（自控時長／頻率、到點自動關閉），避免長期曝露。</p>
             </div>
             <div className="value-card">
-              <div className="value-icon">🤝</div>
-              <h3>社群互助</h3>
-              <p>相信女性間的互助力量，建立溫暖而強大的安全守護網絡。</p>
+              <div className="value-icon">🗺️</div>
+              <h3>情境貼合</h3>
+              <p>安全路徑、AI 假電話／警報，對應夜歸、搭車、陌生環境等日常微場景。</p>
             </div>
             <div className="value-card">
-              <div className="value-icon">⚡</div>
-              <h3>快速響應</h3>
-              <p>在緊急時刻提供最快速的響應，讓求助在關鍵時刻發揮最大效用。</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🎯</div>
-              <h3>持續創新</h3>
-              <p>不斷研發新技術，持續改善產品體驗，為用戶提供最好的安全解決方案。</p>
+              <div className="value-icon">🤖</div>
+              <h3>科技溫度</h3>
+              <p>兼具科技的理性與情感的溫度，把安心做成日常習慣。</p>
             </div>
           </div>
         </div>

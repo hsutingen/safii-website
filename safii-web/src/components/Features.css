@@ -1,6 +1,6 @@
 .features {
   padding: var(--spacing-2xl) 0;
-  background: var(--white);
+  background: var(--section-background);
 }
 
 .features-header {
@@ -8,11 +8,37 @@
   margin-bottom: var(--spacing-2xl);
 }
 
+.section-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+}
+
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
+}
+
+/* 適度追蹤作為主要功能占據整個第一行 */
+.primary-feature {
+  grid-column: 1 / -1;
+  border: 3px solid var(--primary-pink-start);
+  box-shadow: 0 8px 32px rgba(243, 197, 189, 0.3);
+}
+
+.primary-feature .feature-title {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+}
+
+.primary-feature .feature-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .feature-card {
@@ -150,8 +176,12 @@
 /* 響應式設計 */
 @media (max-width: 1024px) {
   .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
+  }
+
+  .primary-feature .feature-title {
+    font-size: 1.6rem;
   }
 }
 
@@ -165,14 +195,22 @@
     gap: var(--spacing-lg);
   }
 
+  .primary-feature {
+    grid-column: 1;
+  }
+
+  .primary-feature .feature-title {
+    font-size: 1.4rem;
+  }
+
   .feature-card {
     padding: var(--spacing-lg);
   }
 
   .feature-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
     gap: var(--spacing-sm);
   }
 

@@ -1,16 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* SAFII 色彩系統 */
-  --primary-pink-start: #FF7CA3;
-  --primary-pink-end: #FFB3C1;
-  --primary-gradient: linear-gradient(135deg, var(--primary-pink-start), var(--primary-pink-end));
-  --dark-gray-blue: #2B2F36;
+  /* SAFII 品牌色彩系統 - 基於最新設計規格 */
+  --safii-pink: #f3c5bd;
+  --safii-orange: #ffc097;
+  --safii-yellow: #fcdc8e;
+  --safii-blue: #d2dfe8;
+  --safii-green: #dae0dc;
+  
+  /* 主要色彩 */
+  --primary-pink-start: #f3c5bd;
+  --primary-pink-end: #ffc097;
+  --primary-gradient: linear-gradient(135deg, #f3c5bd, #ffc097, #d2dfe8);
+  --accent-yellow: #fcdc8e;
+  --accent-blue: #d2dfe8;
+  --accent-green: #dae0dc;
+  
+  /* 文字色彩 */
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
+  --text-secondary: #9CA3AF;
+  
+  /* 背景色彩 */
   --white: #FFFFFF;
-  --light-gray: #F8F9FA;
-  --text-dark: #2B2F36;
-  --text-light: #6C757D;
-  --border-light: #E9ECEF;
+  --light-gray: #FEFEFE;
+  --card-background: var(--safii-blue);
+  --section-background: var(--safii-green);
+  
+  /* 邊框和分隔 */
+  --border-light: #E5E7EB;
+  --border-primary: var(--safii-pink);
+  
+  /* 舊變數保持相容性 */
+  --dark-gray-blue: #1F2937;
   
   /* 字體 */
   --font-chinese: 'Noto Sans TC', sans-serif;
