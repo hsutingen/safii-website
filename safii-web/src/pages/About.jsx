@@ -28,28 +28,6 @@ function About() {
     }
   ];
 
-  const milestones = [
-    {
-      year: '2023',
-      title: '公司成立',
-      description: 'SAFII 團隊正式成立，開始產品研發'
-    },
-    {
-      year: '2023',
-      title: '首輪融資',
-      description: '完成種子輪融資，獲得天使投資人支持'
-    },
-    {
-      year: '2024',
-      title: 'App 上線',
-      description: 'SAFII App 正式上架，開始服務用戶'
-    },
-    {
-      year: '2024',
-      title: '用戶突破',
-      description: '用戶數突破 50,000，建立穩固的安全社群'
-    }
-  ];
 
   return (
     <div className="about-page">
@@ -143,23 +121,6 @@ function About() {
         </div>
       </section>
 
-      <section className="timeline-section">
-        <div className="container">
-          <h2 className="section-title">發展歷程</h2>
-          <div className="timeline">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">{milestone.year}</span>
-                  <h3 className="timeline-title">{milestone.title}</h3>
-                  <p className="timeline-description">{milestone.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="contact-cta">
         <div className="container">

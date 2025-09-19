@@ -127,8 +127,21 @@ p {
   margin-bottom: var(--spacing-md);
   color: var(--text-light);
   line-height: 1.8;
-  text-align: justify;
-  text-justify: inter-character;
+}
+
+/* 桌面版段落對齊 */
+@media (min-width: 769px) {
+  p {
+    text-align: left;
+  }
+}
+
+/* 手機版段落對齊 */
+@media (max-width: 768px) {
+  p {
+    text-align: justify;
+    text-justify: inter-character;
+  }
 }
 
 /* 連結 */

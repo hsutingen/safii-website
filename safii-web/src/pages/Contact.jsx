@@ -28,7 +28,19 @@ function Contact() {
     const body = `姓名：${formData.name}\n電子郵件：${formData.email}\n${formData.company ? `公司/組織：${formData.company}\n` : ''}\n訊息內容：\n${formData.message}`;
     const mailtoLink = `mailto:safiihsu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    window.location.href = mailtoLink;
+    try {
+      window.location.href = mailtoLink;
+      // 如果 mailto 無法開啟，提供備用方案
+      setTimeout(() => {
+        alert('如果郵件軟體沒有自動開啟，請複製以下資訊並手動寄信到 safiihsu@gmail.com：\n\n' +
+              `主旨：${subject}\n\n` +
+              `內容：\n${body}`);
+      }, 1000);
+    } catch (error) {
+      alert('請直接寄信到 safiihsu@gmail.com 或複製以下資訊：\n\n' +
+            `主旨：${subject}\n\n` +
+            `內容：\n${body}`);
+    }
   };
 
   const contactInfo = [
