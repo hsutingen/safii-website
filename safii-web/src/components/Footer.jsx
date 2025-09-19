@@ -20,7 +20,7 @@ function Footer() {
             <h4>產品</h4>
             <ul className="footer-links">
               <li><Link to="/features">功能介紹</Link></li>
-              <li><Link to="/download">立即下載</Link></li>
+              <li><Link to="/about">關於我們</Link></li>
               <li><Link to="/privacy">隱私安全</Link></li>
               <li><Link to="/faq">常見問答</Link></li>
             </ul>
@@ -64,9 +64,8 @@ function Footer() {
           <div className="footer-copyright">
             <p>&copy; 2024 SAFII. All rights reserved.</p>
           </div>
-          <div className="footer-download-links">
-            <a href="#" className="download-link">App Store</a>
-            <a href="#" className="download-link">Google Play</a>
+          <div className="footer-contact">
+            <span>safiihsu@gmail.com</span>
           </div>
         </div>
       </div>

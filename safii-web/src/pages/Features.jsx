@@ -66,19 +66,6 @@ function Features() {
         '24小時陪伴服務'
       ],
       reversed: false
-    },
-    {
-      id: 6,
-      title: '智慧飾品連動',
-      description: '與穿戴式智慧裝置無縫整合，透過簡單手勢或按壓即可觸發各項安全功能。隱密、便利、快速反應。',
-      image: '/images/feature-wearable.jpg',
-      details: [
-        '智慧手環/項鍊連動',
-        '隱密手勢觸發',
-        '無聲緊急求助',
-        '時尚外觀設計'
-      ],
-      reversed: true
     }
   ];
 
@@ -121,7 +108,6 @@ function Features() {
                       {feature.id === 3 && '📞'}
                       {feature.id === 4 && '🗺️'}
                       {feature.id === 5 && '👥'}
-                      {feature.id === 6 && '⌚'}
                     </div>
                     <span className="placeholder-text">功能展示圖</span>
                   </div>

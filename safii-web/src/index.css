@@ -1,38 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* SAFII 品牌色彩系統 - 基於最新設計規格 */
-  --safii-pink: #f3c5bd;
-  --safii-orange: #ffc097;
-  --safii-yellow: #fcdc8e;
-  --safii-blue: #d2dfe8;
-  --safii-green: #dae0dc;
+  /* SAFII 粉色系品牌色彩 - 更溫暖美觀的設計 */
+  --safii-pink-primary: #E91E63;
+  --safii-pink-light: #F8BBD9;
+  --safii-pink-soft: #FCE4EC;
+  --safii-pink-dark: #AD1457;
+  --safii-accent: #FF6B9D;
   
   /* 主要色彩 */
-  --primary-pink-start: #f3c5bd;
-  --primary-pink-end: #ffc097;
-  --primary-gradient: linear-gradient(135deg, #f3c5bd, #ffc097, #d2dfe8);
-  --accent-yellow: #fcdc8e;
-  --accent-blue: #d2dfe8;
-  --accent-green: #dae0dc;
+  --primary-pink-start: #E91E63;
+  --primary-pink-end: #FF6B9D;
+  --primary-gradient: linear-gradient(135deg, #E91E63, #FF6B9D);
+  --secondary-gradient: linear-gradient(135deg, #F8BBD9, #FCE4EC);
+  
+  /* 輔助色彩 */
+  --accent-pink: #FF6B9D;
+  --soft-pink: #F8BBD9;
+  --background-pink: #FCE4EC;
+  --deep-pink: #AD1457;
   
   /* 文字色彩 */
-  --text-dark: #1F2937;
-  --text-light: #6B7280;
-  --text-secondary: #9CA3AF;
+  --text-dark: #2D3748;
+  --text-light: #718096;
+  --text-secondary: #A0AEC0;
+  --text-on-pink: #FFFFFF;
   
   /* 背景色彩 */
   --white: #FFFFFF;
-  --light-gray: #FEFEFE;
-  --card-background: var(--safii-blue);
-  --section-background: var(--safii-green);
+  --light-gray: #F7FAFC;
+  --card-background: #FFF5F8;
+  --section-background: var(--background-pink);
   
   /* 邊框和分隔 */
-  --border-light: #E5E7EB;
-  --border-primary: var(--safii-pink);
+  --border-light: #EDF2F7;
+  --border-primary: var(--soft-pink);
+  
+  /* 狀態色彩 */
+  --success: #48BB78;
+  --warning: #ED8936;
+  --error: #F56565;
+  --info: var(--accent-pink);
   
   /* 舊變數保持相容性 */
-  --dark-gray-blue: #1F2937;
+  --dark-gray-blue: #2D3748;
+  --safii-pink: var(--soft-pink);
+  --safii-orange: var(--accent-pink);
+  --safii-yellow: #FED7D7;
+  --safii-blue: var(--card-background);
+  --safii-green: var(--background-pink);
   
   /* 字體 */
   --font-chinese: 'Noto Sans TC', sans-serif;

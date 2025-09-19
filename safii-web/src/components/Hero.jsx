@@ -19,11 +19,11 @@ function Hero() {
               為女性量身設計的隱私友善型安全守護系統，兼具科技的理性與情感的溫度。
             </p>
             <div className="hero-actions">
-              <Link to="/download" className="btn btn-primary btn-large">
-                立即下載 APP
+              <Link to="/about" className="btn btn-primary btn-large">
+                認識我們
               </Link>
               <Link to="/features" className="btn btn-outline btn-large">
-                了解更多
+                了解功能
               </Link>
             </div>
             <div className="hero-stats">

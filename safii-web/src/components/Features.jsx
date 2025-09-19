@@ -1,6 +1,25 @@
+import { useState } from 'react';
 import './Features.css';
 
+// Import media files
+import moderateTrackingSettings from '../assets/media/features/moderate-tracking-settings.png';
+import moderateTrackingDanger from '../assets/media/features/moderate-tracking-danger.mov';
+import moderateTrackingEmergency from '../assets/media/features/moderate-tracking-emergency-contacts.mov';
+import womenMutualAid from '../assets/media/features/women-mutual-aid.mov';
+
 function Features() {
+  const [activeMedia, setActiveMedia] = useState(null);
+  const [showMediaModal, setShowMediaModal] = useState(false);
+
+  const openMediaModal = (media) => {
+    setActiveMedia(media);
+    setShowMediaModal(true);
+  };
+
+  const closeMediaModal = () => {
+    setShowMediaModal(false);
+    setActiveMedia(null);
+  };
   const features = [
     {
       id: 1,
@@ -13,6 +32,26 @@ function Features() {
         '到點自動關閉',
         '未回報即求援',
         '隱私優先設計'
+      ],
+      media: [
+        {
+          type: 'image',
+          src: moderateTrackingSettings,
+          title: '模式設定',
+          description: '輕鬆設定追蹤時長與回報頻率'
+        },
+        {
+          type: 'video',
+          src: moderateTrackingDanger,
+          title: '危險偵測',
+          description: '系統自動偵測異常並發出警報'
+        },
+        {
+          type: 'video',
+          src: moderateTrackingEmergency,
+          title: '緊急聯絡',
+          description: '一鍵聯繫緊急聯絡人'
+        }
       ],
       bgColor: 'var(--safii-pink)',
       iconBg: 'linear-gradient(135deg, #f3c5bd, #ffc097)',
@@ -75,6 +114,14 @@ function Features() {
         '距離優先媒合',
         '黃金時間支援'
       ],
+      media: [
+        {
+          type: 'video',
+          src: womenMutualAid,
+          title: '視訊陪走',
+          description: '女性互助網路，視訊陪走降低求助門檻'
+        }
+      ],
       bgColor: 'var(--safii-orange)',
       iconBg: 'linear-gradient(135deg, #ffc097, #ffb088)'
     }
@@ -124,9 +171,43 @@ function Features() {
                 ))}
               </ul>
 
+              {feature.media && (
+                <div className="feature-media-preview">
+                  <div className="media-thumbnails">
+                    {feature.media.slice(0, 3).map((media, index) => (
+                      <div 
+                        key={index} 
+                        className="media-thumbnail"
+                        onClick={() => openMediaModal(media)}
+                      >
+                        {media.type === 'image' ? (
+                          <img src={media.src} alt={media.title} />
+                        ) : (
+                          <div className="video-thumbnail">
+                            <video src={media.src} muted />
+                            <div className="play-overlay">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        )}
+                        <span className="media-title">{media.title}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {feature.media.length > 3 && (
+                    <p className="media-count">+{feature.media.length - 3} 更多內容</p>
+                  )}
+                </div>
+              )}
+
               <div className="feature-action">
-                <button className="feature-btn">
-                  了解更多
+                <button 
+                  className="feature-btn"
+                  onClick={() => feature.media && openMediaModal(feature.media[0])}
+                >
+                  {feature.media ? '觀看示範' : '了解更多'}
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M6.5 3l4.5 4.5-4.5 4.5-1-1 3.5-3.5L5.5 4l1-1z"/>
                   </svg>
@@ -135,6 +216,39 @@ function Features() {
             </div>
           ))}
         </div>
+
+        {/* Media Modal */}
+        {showMediaModal && activeMedia && (
+          <div className="media-modal-overlay" onClick={closeMediaModal}>
+            <div className="media-modal" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={closeMediaModal}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+              </button>
+              
+              <div className="modal-content">
+                <div className="modal-media">
+                  {activeMedia.type === 'image' ? (
+                    <img src={activeMedia.src} alt={activeMedia.title} />
+                  ) : (
+                    <video 
+                      src={activeMedia.src} 
+                      controls 
+                      autoPlay
+                      style={{ maxWidth: '100%', maxHeight: '70vh' }}
+                    />
+                  )}
+                </div>
+                
+                <div className="modal-info">
+                  <h3 className="modal-title">{activeMedia.title}</h3>
+                  <p className="modal-description">{activeMedia.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

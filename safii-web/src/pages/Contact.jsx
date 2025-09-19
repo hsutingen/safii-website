@@ -19,64 +19,28 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 這裡可以處理表單提交邏輯
-    console.log('Form submitted:', formData);
-    alert('感謝您的訊息！我們會盡快回覆您。');
+    // 生成 mailto 鏈接
+    const subject = `SAFII 聯繫 - ${formData.type === 'general' ? '一般諮詢' : 
+                    formData.type === 'partnership' ? '合作提案' : 
+                    formData.type === 'investment' ? '投資洽談' : 
+                    formData.type === 'media' ? '媒體採訪' : 
+                    formData.type === 'support' ? '技術支援' : '意見回饋'}`;
+    const body = `姓名：${formData.name}\n電子郵件：${formData.email}\n${formData.company ? `公司/組織：${formData.company}\n` : ''}\n訊息內容：\n${formData.message}`;
+    const mailtoLink = `mailto:safiihsu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
   };
 
   const contactInfo = [
     {
-      icon: '📧',
-      title: '一般諮詢',
-      description: '產品使用問題、功能建議',
-      contact: 'hello@safii.com'
-    },
-    {
-      icon: '🤝',
-      title: '合作夥伴',
-      description: '企業合作、技術整合',
-      contact: 'partnership@safii.com'
-    },
-    {
-      icon: '📈',
-      title: '投資人關係',
-      description: '投資洽談、財務資訊',
-      contact: 'investor@safii.com'
-    },
-    {
-      icon: '📰',
-      title: '媒體聯絡',
-      description: '採訪邀約、新聞發布',
-      contact: 'media@safii.com'
+      icon: '💌',
+      title: '聯繫我們',
+      description: '任何問題、建議或合作提案，歡迎來信',
+      contact: 'safiihsu@gmail.com'
     }
   ];
 
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      icon: '📘',
-      url: '#',
-      description: '追蹤最新消息與安全資訊'
-    },
-    {
-      name: 'Instagram',
-      icon: '📷',
-      url: '#',
-      description: '日常安全小貼士分享'
-    },
-    {
-      name: 'LinkedIn',
-      icon: '💼',
-      url: '#',
-      description: '企業合作與職業發展'
-    },
-    {
-      name: 'Twitter',
-      icon: '🐦',
-      url: '#',
-      description: '即時動態與產品更新'
-    }
-  ];
+  // 移除社群媒體連結，因為目前只有email聯絡方式
 
   return (
     <div className="contact-page">
@@ -111,40 +75,11 @@ function Contact() {
         <div className="container">
           <div className="form-content">
             <div className="form-intro">
-              <h2>發送訊息給我們</h2>
+              <h2>與我們聯繫</h2>
               <p>
-                填寫下方表單，我們的團隊會在 24 小時內回覆您。
-                對於緊急事項，請直接撥打客服電話。
+                SAFII 目前正在開發中，我們很樂意聽到您的想法和建議。
+                填寫下方表單或直接寄信到 safiihsu@gmail.com 與我們聯繫。
               </p>
-              
-              <div className="contact-details">
-                <div className="contact-item">
-                  <div className="contact-icon">📞</div>
-                  <div>
-                    <h4>客服電話</h4>
-                    <p>0800-123-456</p>
-                    <span className="contact-note">週一至週五 9:00-18:00</span>
-                  </div>
-                </div>
-                
-                <div className="contact-item">
-                  <div className="contact-icon">📍</div>
-                  <div>
-                    <h4>公司地址</h4>
-                    <p>台北市信義區信義路五段 7 號</p>
-                    <span className="contact-note">台北 101 大樓</span>
-                  </div>
-                </div>
-                
-                <div className="contact-item">
-                  <div className="contact-icon">⏰</div>
-                  <div>
-                    <h4>營業時間</h4>
-                    <p>週一至週五 9:00-18:00</p>
-                    <span className="contact-note">國定假日休息</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
@@ -232,49 +167,26 @@ function Contact() {
         </div>
       </section>
 
-      <section className="social-section">
-        <div className="container">
-          <h2 className="section-title">追蹤我們</h2>
-          <p className="section-subtitle">
-            在社群媒體上關注我們，獲得最新資訊與安全小貼士
-          </p>
-          
-          <div className="social-grid">
-            {socialLinks.map((social, index) => (
-              <a key={index} href={social.url} className="social-card" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon">{social.icon}</div>
-                <h3 className="social-name">{social.name}</h3>
-                <p className="social-description">{social.description}</p>
-                <div className="social-arrow">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M6.5 3l4.5 4.5-4.5 4.5-1-1 3.5-3.5L5.5 4l1-1z"/>
-                  </svg>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="faq-section">
         <div className="container">
-          <h2 className="section-title">常見問題</h2>
+          <h2 className="section-title">關於 SAFII</h2>
           <div className="faq-grid">
             <div className="faq-item">
-              <h4>SAFII 是免費使用的嗎？</h4>
-              <p>是的，SAFII 的基本功能完全免費。我們相信每個人都有享受安全的權利。</p>
+              <h4>SAFII 目前的開發狀況如何？</h4>
+              <p>SAFII 目前正在積極開發中，我們致力於打造最好的安全守護系統。</p>
             </div>
             <div className="faq-item">
-              <h4>我的個人資料會被保護嗎？</h4>
-              <p>絕對會。我們採用最高等級的加密技術，並且不會將您的資料分享給第三方。</p>
+              <h4>什麼是「適度追蹤」？</h4>
+              <p>這是我們的核心功能，讓您自控追蹤時長，只在需要時分享位置，兼顧安全與隱私。</p>
             </div>
             <div className="faq-item">
-              <h4>如何加入女性互助社群？</h4>
-              <p>下載 APP 並完成註冊後，即可自動加入您所在地區的女性互助網絡。</p>
+              <h4>如何參與 SAFII 的開發或測試？</h4>
+              <p>歡迎透過 safiihsu@gmail.com 與我們聯繫，我們很樂意聽到您的想法和建議。</p>
             </div>
             <div className="faq-item">
-              <h4>緊急求助功能如何運作？</h4>
-              <p>按下緊急按鈕後，系統會立即發送您的位置給緊急聯絡人和附近的互助成員。</p>
+              <h4>SAFII 的核心理念是什麼？</h4>
+              <p>Safe for Every 'I' - 為每個獨立個體提供隱私友善的安全守護，讓安全不再靠運氣。</p>
             </div>
           </div>
         </div>

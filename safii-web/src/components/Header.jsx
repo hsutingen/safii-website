@@ -13,7 +13,6 @@ function Header() {
     { name: '關於我們', path: '/about' },
     { name: '常見問答', path: '/faq' },
     { name: '隱私安全', path: '/privacy' },
-    { name: '下載', path: '/download' },
     { name: '聯繫', path: '/contact' },
   ];
 
@@ -39,8 +38,8 @@ function Header() {
             ))}
           </nav>
 
-          <Link to="/download" className="btn btn-primary header-cta">
-            立即下載
+          <Link to="/contact" className="btn btn-primary header-cta">
+            聯繫我們
           </Link>
 
           <button 
