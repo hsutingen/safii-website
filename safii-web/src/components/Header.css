@@ -17,6 +17,30 @@
   height: 70px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: var(--font-english);
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
 .logo h1 {
   font-family: var(--font-english);
   font-size: 1.8rem;

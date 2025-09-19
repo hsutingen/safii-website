@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/images/logo.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,8 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <h1>SAFII</h1>
+            <img src={logo} alt="SAFII Logo" className="logo-image" />
+            <span className="logo-text">SAFII</span>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
