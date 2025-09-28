@@ -10,7 +10,7 @@ function Features() {
   const features = [
     {
       id: 1,
-      title: '被動定位追蹤',
+      title: '適度追蹤',
       description: '智慧化的位置監控系統，在保護隱私的前提下提供必要的安全追蹤。僅在緊急情況下啟動，確保個人隱私不受侵犯。',
       details: [
         '隱私優先的定位設計',
