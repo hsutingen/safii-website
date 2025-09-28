@@ -122,6 +122,13 @@
   font-weight: 500;
 }
 
+.feature-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
 .features-cta {
   padding: var(--spacing-2xl) 0;
   background: var(--dark-gray-blue);

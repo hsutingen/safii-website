@@ -22,7 +22,6 @@ function Header() {
         <div className="header-content">
           <Link to="/" className="logo">
             <img src={logo} alt="SAFII Logo" className="logo-image" />
-            <span className="logo-text">SAFII</span>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

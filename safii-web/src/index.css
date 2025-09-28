@@ -193,6 +193,14 @@ a:hover {
   color: var(--white);
 }
 
+.btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 /* 容器 */
 .container {
   max-width: 1200px;

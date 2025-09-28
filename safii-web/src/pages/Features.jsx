@@ -1,12 +1,17 @@
 import './Features.css';
+import featureImage0 from '../assets/images/features/0.png';
+import featureImage1 from '../assets/images/features/1.png';
+import featureImage2 from '../assets/images/features/2.png';
+import featureImage3 from '../assets/images/features/3.png';
+import featureImage4 from '../assets/images/features/4.png';
 
 function Features() {
+  const featureImages = [featureImage0, featureImage1, featureImage2, featureImage3, featureImage4];
   const features = [
     {
       id: 1,
       title: '被動定位追蹤',
       description: '智慧化的位置監控系統，在保護隱私的前提下提供必要的安全追蹤。僅在緊急情況下啟動，確保個人隱私不受侵犯。',
-      image: '/images/feature-tracking.jpg',
       details: [
         '隱私優先的定位設計',
         '緊急情況自動啟動',
@@ -19,7 +24,6 @@ function Features() {
       id: 2,
       title: '緊急通報系統',
       description: '一鍵發送位置與狀況給信任聯絡人和專業保全單位。快速、準確、可靠的求助機制，在危急時刻成為您的生命線。',
-      image: '/images/feature-emergency.jpg',
       details: [
         '一鍵緊急求助',
         '自動發送精確位置',
@@ -32,7 +36,6 @@ function Features() {
       id: 3,
       title: '假電話與強噪音',
       description: '模擬真實來電和產生高分貝警報音，有效嚇阻潛在危險。多種情境模式可選，幫助您在危險中脫身。',
-      image: '/images/feature-distraction.jpg',
       details: [
         '逼真的假來電界面',
         '可自訂來電者資訊',
@@ -45,7 +48,6 @@ function Features() {
       id: 4,
       title: '安全路線規劃',
       description: '基於大數據分析的智慧路線推薦，實時標注便利商店、警察局等安全地點，主動避開高風險區域，讓每一步都更安全。',
-      image: '/images/feature-routing.jpg',
       details: [
         'AI智慧路線分析',
         '即時危險區域警示',
@@ -58,7 +60,6 @@ function Features() {
       id: 5,
       title: '女性互助社群',
       description: '建立在地女性互助網絡，提供就近協助與陪伴。透過匿名保護機制，在維護隱私的同時建立強大的安全守護網。',
-      image: '/images/feature-community.jpg',
       details: [
         '附近女性即時協助',
         '匿名互助保護機制',
@@ -84,7 +85,7 @@ function Features() {
         {features.map((feature) => (
           <section 
             key={feature.id} 
-            className={`feature-section ${feature.reversed ? 'reversed' : ''}`}
+            className={`feature-section ${feature.reversed ? '' : ''}`}
           >
             <div className="container">
               <div className="feature-content">
@@ -101,16 +102,7 @@ function Features() {
                   </ul>
                 </div>
                 <div className="feature-visual">
-                  <div className="feature-image-placeholder">
-                    <div className="placeholder-icon">
-                      {feature.id === 1 && '📍'}
-                      {feature.id === 2 && '🚨'}
-                      {feature.id === 3 && '📞'}
-                      {feature.id === 4 && '🗺️'}
-                      {feature.id === 5 && '👥'}
-                    </div>
-                    <span className="placeholder-text">功能展示圖</span>
-                  </div>
+                  <img src={featureImages[feature.id - 1]} alt={feature.title} className="feature-image" />
                 </div>
               </div>
             </div>
@@ -122,10 +114,10 @@ function Features() {
         <div className="container">
           <div className="cta-content">
             <h2>體驗完整功能</h2>
-            <p>立即下載 SAFII，開始您的安全守護之旅</p>
-            <a href="/download" className="btn btn-primary btn-large">
-              免費下載 APP
-            </a>
+            <p>我們的應用程式仍在開發中，敬請期待！</p>
+            <button className="btn btn-primary btn-large" disabled>
+              即將推出
+            </button>
           </div>
         </div>
       </section>
